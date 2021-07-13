@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    min-height: 100vh;
+    background: #fff;
+}
+.navbar{
+    background:#000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    min-height: 3rem;
+    border-bottom: 1px solid #00acee;
+}
+.navbar ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.navbar ul li{
+    padding-right:50px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    font-size: 22px;
+    color: #fff;
+}
+.navbar ul li a:hover{
+    color: #00acee;
+}
+.navbar input{
+    padding: 7px 3px;
+    border: none;
+    color: #000;
+    outline: none;
+}
+.navbar input:focus{
+    outline:2px solid #63b9db;
+    
+}
+.current_time{
+    text-align: center;
+    color: #fff;
+    background: #000;
+    padding: 13px 20px;
+}
+.container{
+    display: grid;
+    place-items: center;
+    color: #fff;
+    margin-top: 23px;
+   
+}
+.weather_container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 290px;
+    box-shadow: -4px 6px 54px -1px rgba(182,155,155,0.75);
+    -webkit-box-shadow: -4px 6px 54px -1px rgba(182,155,155,0.75);
+    -moz-box-shadow: -4px 6px 54px -1px rgba(182,155,155,0.75);
+}
+.weather_container h4,.weather_container p{
+    margin-bottom: 18px;
+    letter-spacing: 1.3px;
+}
+.baseInfo{
+    background: linear-gradient(to top left, #13D7E3, #19227a);
+    width: 300px;
+    padding: 10px 20px;
+    text-align: center;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+.info_container{
+    padding: 0px 0px;
+    background: linear-gradient(to top left, #13D7E3, #19227a);
+    width:0px;
+    transition: all  .2s linear;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    visibility: hidden;
+}
+.title{
+    text-align: center;
+}
+.info_container_extend{
+    width:300px;
+    padding: 10px 20px;
+    visibility: visible;
+}
+.arrow_btn{
+    position: absolute;
+    top: 50%;
+    right: -4%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #19227a;
+    color: #fff;
+}
+.right_arrow_transform{
+    transform: rotate(180deg);
+}
+.arrow_btn:hover{
+    opacity: .7;
+}
+.fa-bars{
+    display: none !important;
+}
+.snow{
+    z-index: 5345353;
+    color:#63b9db;
+    position: fixed;
+    top: -100px;
+    animation: animate linear;
+    font-size:27px;
+}
+@keyframes animate{
+    from{
+      top: -23px;
+    }
+    to{
+        top: 100vh;
+    }
+}
+@media only screen and (max-width:587px){
+    .weather_container{
+      align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        height: auto;
+    }
+    .baseInfo{
+        border-top-right-radius: 7px;
+        border-bottom-left-radius: 0px;
+    }
+    .info_container{
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 7px;
+        width:300px;
+        height: 0px;
+        transition: all  .2s linear;
+    }
+    .info_container_extend{
+        height: 240px;
+    }
+    .arrow_btn{
+        top:98%;
+        right: 48%;
+        transform: rotate(90deg);
+    }
+}
+@media only screen and (max-width:577px){
+    .fa-bars{
+        display: block !important;
+        color: #fff;
+        font-size: 34px !important;
+    }
+    .navbar ul{
+        position: fixed;
+        background-color: black;
+        z-index: 56;
+        top:64px;
+        left: 0px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        transform: translateX(-100%);
+        transition: all .5s linear;
+        padding-left: 16px;
+       
+    }
+    .navbar ul.menu_toggle{
+        transform: translateX(0px);
+    }
+}

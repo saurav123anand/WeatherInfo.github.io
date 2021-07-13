@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <i class="fa fa-bars hamburger"></i>
+        <ul class="menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">API</a></li>
+        </ul>
+        <form id="form">
+            <input type="search" name="search" id="search" placeholder="Search Place">
+        </form>
+    </nav>
+    <p class="current_time"></p>
+    <div class="container">
+        <div class="weather_container">
+            <div class="baseInfo">
+                <p class="weather_logo"><img src="" alt=""></p>
+                <p class="description">Description: </p>
+               <p class="place">
+                   <span class="location"><i class="fa fa-map-marker"></i></span>
+                   <span class="city">city</span>
+                   <span class="country">country</span>
+               </p>   
+                <p class="temp">temp</p>
+                <p class="min_temp">min temp</p>
+                <p class="max_temp">max temp</p>
+            </div>
+            <div class="info_container">
+                <h4 class="title">More Info</h4>
+                <div class="info_box">
+                    <p class="humidity">humidity</p>
+                    <p class="pressure">pressure</p>
+                    <p class="wind_speed">wind speed</p>
+                    <p class="wind_direction">wind direction</p>
+                </div>
+            </div>
+             <button class="arrow_btn"><i class="fa fa-chevron-right right_arrow"></i></button>
+        </div>
+    </div>
+   <script src="./script.js"></script>
+</body>
+</html>
